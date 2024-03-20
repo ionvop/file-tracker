@@ -1,6 +1,6 @@
 import java.util.*;
 import java.io.*;
-import java.text.SimpleDateFormat;
+import java.text.*;
 
 public class Checkpoint {
     public String name;
@@ -9,10 +9,13 @@ public class Checkpoint {
     public String path;
     public long size;
 
+    // Constructor to create a checkpoint for a given file
     Checkpoint(File file) {
         name = file.getName();
+        // Format the current date and time
         date = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss").format(new Date());
         
+        // Read content of the file
         try (Scanner scan = new Scanner(file)) {
             while (scan.hasNextLine()) {
                 content += scan.nextLine() + "\n";
@@ -25,5 +28,4 @@ public class Checkpoint {
         path = file.getAbsolutePath();
         size = file.length();
     }
-
 }
