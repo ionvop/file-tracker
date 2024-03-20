@@ -71,15 +71,4 @@ public class Program {
             }
         }
     }
-
-    // Utility method to get argument value for a given flag
-    public static String getArg(String[] args, String flag) {
-        for (int i = 0; i < args.length; i++) {
-            if (args[i].equals(flag)) {
-                return args[i + 1];
-            }
-        }
-
-        return null;
-    }
 }

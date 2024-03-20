@@ -1,3 +1,3 @@
-javac "Program.java"
-java "Program"
+javac "Program.java" -d "bin"
+java -cp "bin" "Program"
 pause

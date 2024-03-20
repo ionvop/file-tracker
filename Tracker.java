@@ -31,6 +31,7 @@ public class Tracker extends Thread {
                 }
             }
 
+            // Stop the thread if isTerminated is true
             if (isTerminated) {
                 return;
             }
